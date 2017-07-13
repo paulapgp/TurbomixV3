@@ -8,12 +8,20 @@ namespace TurboMix
 {
     public class CocinaService : ICocina
     {
-            public void Calentar(Alimento alimento1, Alimento alimento2)
+
+        //public Plato PrepararReceta(Alimento alimento1, Alimento alimento2)
+        //{
+        //    return 
+            
+        //}
+
+        public void Calentar(Alimento alimento1, Alimento alimento2)
             {
                 alimento1.Calentado = true;
                 alimento2.Calentado = true;
             }
         
+
         /// <summary>
         /// Método de cocina de dos alimentos.
         /// </summary>
