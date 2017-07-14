@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TurboMix
 {
-    public class CocinaService : ICocina
+    public class CocinaService : ICocinaService
     {
 
         //public Plato PrepararReceta(Alimento alimento1, Alimento alimento2)

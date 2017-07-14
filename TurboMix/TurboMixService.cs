@@ -8,21 +8,23 @@ namespace TurboMix
 {
     public class TurboMixService
     {
-        public IBascula bascula { get; set; }
-        public ICocina cocina { get; set; }
-        public TurboMixService(IBascula _Bascula, ICocina _Cocina)
+        public IBasculaService basculaService { get; set; }
+        public ICocinaService cocinaService { get; set; }
+
+       
+
+        public TurboMixService(IBasculaService _Bascula, ICocinaService _Cocina)
         {
-            this.bascula = _Bascula;
-            this.cocina = _Cocina;
+            this.basculaService = _Bascula;
+            this.cocinaService = _Cocina;
 
         }
 
         public Plato PesarYCalentar(Alimento alimentoPrimero, Alimento alimentoSegundo)
         {
-            bascula.Pesar(alimentoPrimero);
-            bascula.Pesar(alimentoSegundo);
-
-            cocina.Calentar(alimentoPrimero, alimentoSegundo);
+            basculaService.Pesar(alimentoPrimero);
+            basculaService.Pesar(alimentoSegundo);
+            cocinaService.Calentar(alimentoPrimero, alimentoSegundo);
 
             return new Plato(alimentoPrimero, alimentoSegundo);
         }
@@ -34,13 +36,13 @@ namespace TurboMix
                 if (!alimentoPrimero.Calentado && !alimentoSegundo.Calentado)
                 {
 
-                    if (bascula.Pesar(alimentoPrimero) < r.alimentoPrincipal.Peso || bascula.Pesar(alimentoSegundo) < r.alimentoPrincipal.Peso)
+                    if (basculaService.Pesar(alimentoPrimero) < r.alimentoPrincipal.Peso || basculaService.Pesar(alimentoSegundo) < r.alimentoPrincipal.Peso)
                     {
                         return null;
                     }
                     else
                     {
-                        if (bascula.Pesar(alimentoPrimero) > r.alimentoPrincipal.Peso || bascula.Pesar(alimentoSegundo) > r.alimentoPrincipal.Peso)
+                        if (basculaService.Pesar(alimentoPrimero) > r.alimentoPrincipal.Peso || basculaService.Pesar(alimentoSegundo) > r.alimentoPrincipal.Peso)
                         {
                             alimentoPrimero.Peso = r.alimentoPrincipal.Peso;
                             alimentoSegundo.Peso = r.alimentoSecundario.Peso;
@@ -58,5 +60,6 @@ namespace TurboMix
         {
             return alimentoPrimero.Nombre.Equals(r.alimentoPrincipal.Nombre) && alimentoSegundo.Nombre.Equals(r.alimentoSecundario.Nombre);
         }
+        
     }
 }

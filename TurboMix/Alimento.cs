@@ -22,7 +22,7 @@ namespace TurboMix
             this.Peso = Peso;
             this.Calentado = Calentado;
         }
-        public override bool Equals(object obj)
+        public override bool Equals(Object obj)
         {
             if(obj == null)
             {

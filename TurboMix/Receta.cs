@@ -10,6 +10,7 @@ namespace TurboMix
     {
         public Alimento alimentoPrincipal { get; set; }
         public Alimento alimentoSecundario { get; set; }
+        public String nombre;
 
         public Receta() { }
         public Receta(Alimento alimentoPrincipal, Alimento alimentoSecundario)

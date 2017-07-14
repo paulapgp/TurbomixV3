@@ -12,7 +12,7 @@ namespace TurboMixTest
         public void CalentarTest()
         {
 
-            ICocina sut = new CocinaService();
+            ICocinaService sut = new CocinaService();
             Alimento alimento1 = new Alimento();
             Alimento alimento2 = new Alimento();
 

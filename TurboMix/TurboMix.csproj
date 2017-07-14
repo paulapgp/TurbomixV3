@@ -45,11 +45,15 @@
   <ItemGroup>
     <Compile Include="Alimento.cs" />
     <Compile Include="CocinaService.cs" />
-    <Compile Include="ICocina.cs" />
-    <Compile Include="IBascula.cs" />
+    <Compile Include="ICocinaService.cs" />
+    <Compile Include="IBasculaService.cs" />
     <Compile Include="BasculaService.cs" />
+    <Compile Include="IRecetaRepository.cs" />
+    <Compile Include="IRecetaService.cs" />
     <Compile Include="Plato.cs" />
     <Compile Include="Receta.cs" />
+    <Compile Include="RecetaRepository.cs" />
+    <Compile Include="RecetaService.cs" />
     <Compile Include="TurboMixService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TurboMix
 {
-    public class BasculaService : IBascula
+    public class BasculaService : IBasculaService
     {
         private bool pesado = false;
 

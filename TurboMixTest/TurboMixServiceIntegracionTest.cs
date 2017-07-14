@@ -17,8 +17,8 @@ namespace TurboMixTest
         [TestInitialize]
         public void init()
         {
-            IBascula basculaService = new BasculaService();
-            ICocina cocinaService = new CocinaService();
+            IBasculaService basculaService = new BasculaService();
+            ICocinaService cocinaService = new CocinaService();
 
             sut = new TurboMixService(basculaService, cocinaService);
             alimento1 = new Alimento();

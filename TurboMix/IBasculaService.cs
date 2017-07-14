@@ -1,6 +1,6 @@
 ﻿namespace TurboMix
 {
-    public interface IBascula
+    public interface IBasculaService
     {
         bool IsLlamado();
         float Pesar(Alimento alimento);
